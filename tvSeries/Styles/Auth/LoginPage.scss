@@ -1,0 +1,84 @@
+﻿@import "../Utils.scss";
+
+.LoginPanel {
+    @include material-shadow(4, 0.5);
+    width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: white;
+    margin-bottom: 2rem;
+
+    @media (max-width: $break-medium) {
+        width: 90%;
+    }
+
+    .Logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .Line {
+        .Label {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .InputWrapper {
+            margin-top: 1rem;
+            display: flex;
+
+            .Input {
+                width: 100%;
+                flex: 1;
+                height: 2rem;
+                font-size: 1.5rem;
+                outline: none;
+                border: 1px solid #495057;
+            }
+        }
+    }
+
+    .Line + .Line {
+        margin-top: 2rem;
+    }
+
+    .ButtonWrapper {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .LoginButton {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: white;
+            background: #cc5de8;
+            user-select: none;
+            cursor: pointer;
+
+            &:hover {
+                background: #da77f2;
+            }
+
+            &:active {
+                background: #cc5de8;
+            }
+        }
+    }
+
+    .Description {
+        text-align: right;
+        margin-top: 1rem;
+
+        a {
+            color: #7950f2;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+﻿@import "Utils.scss";
+
+.PageHeader {
+    background: #cc5de8;
+
+    .Contents {
+        display: flex;
+        align-items: center;
+        height: 5rem;
+        padding: 1rem;
+
+        .Logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            user-select: none;
+            cursor: pointer;
+
+            @media (max-width: $break-medium) {
+                font-size: 1.25rem;
+            }
+        }
+
+        .Hamburger{
+            margin-left: auto;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+﻿@import 'Utils.scss';
+
+.SideBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #d6336c;
+    height: 100%;
+    width: 300px;
+
+    @include material-shadow(4, 0.5);
+
+    .Menus {
+        display: flex;
+        flex-direction: column;
+
+        .MenuItem {
+            padding: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: white;
+            user-select: none;
+            cursor: pointer;
+
+            &:hover {
+                background: #e64980;
+            }
+
+            &:active {
+                background: #d6336c;
+            }
+        }
+
+        .MenuItem + .MenuItem {
+            border-top: 1px solid #dee2e6;
+        }
+    }
+}

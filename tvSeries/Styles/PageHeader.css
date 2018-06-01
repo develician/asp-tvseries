@@ -1,0 +1,20 @@
+﻿.PageHeader {
+  background: #cc5de8; }
+  .PageHeader .Contents {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    padding: 1rem; }
+    .PageHeader .Contents .Logo {
+      font-size: 2rem;
+      font-weight: 800;
+      color: white;
+      user-select: none;
+      cursor: pointer; }
+      @media (max-width: 768px) {
+        .PageHeader .Contents .Logo {
+          font-size: 1.25rem; } }
+    .PageHeader .Contents .Hamburger {
+      margin-left: auto;
+      cursor: pointer; }
+

@@ -1,0 +1,30 @@
+﻿[
+  {
+    "outputFile": "Styles/Base.css",
+    "inputFile": "Styles/Base.scss"
+  },
+  {
+    "outputFile": "Styles/PageTemplate.css",
+    "inputFile": "Styles/PageTemplate.scss"
+  },
+  {
+    "outputFile": "Styles/PageHeader.css",
+    "inputFile": "Styles/PageHeader.scss"
+  },
+  {
+    "outputFile": "Styles/Utils.css",
+    "inputFile": "Styles/Utils.scss"
+  },
+  {
+    "outputFile": "Styles/SideBar.css",
+    "inputFile": "Styles/SideBar.scss"
+  },
+  {
+    "outputFile": "Styles/PageFooter.css",
+    "inputFile": "Styles/PageFooter.scss"
+  },
+  {
+    "outputFile": "Styles/Auth/LoginPage.css",
+    "inputFile": "Styles/Auth/LoginPage.scss"
+  }
+]

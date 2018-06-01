@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="tvSeries.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="~/Styles/Base.css" />
+    <link rel="stylesheet" href="~/Styles/PageTemplate.css" />
+    <link rel="stylesheet" href="~/Styles/PageHeader.css" />
+    <link rel="stylesheet" href="~/Styles/PageFooter.css" />
+    <link rel="stylesheet" href="~/Styles/SideBar.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function ShowSideBar() {
+            document.getElementById('<%= SideBarPanel.ClientID %>').style.visibility = 'visible';
+        }
+
+        function HideSideBar() {
+            document.getElementById('<%= SideBarPanel.ClientID %>').style.visibility = 'hidden';
+        }
+
+        
+    </script>
+</head>
+<body>
+    <div class="PageTemplate">
+        <div class="PageHeader">
+            <div class="Contents">
+                <a href="/HomePage.aspx" class="Logo">TV-SERIES
+                </a>
+                <div class="Hamburger" onclick="ShowSideBar()">
+                    <i style="color: white; font-size: 1.5rem;margin-left: auto" class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        <asp:Panel style="visibility: hidden;" ID="SideBarPanel" runat="server">
+            <div class="SideBar">
+                <div class="Menus">
+                    <div class="MenuItem" onclick="HideSideBar()">
+                        Close
+                    </div>
+                    <a href="/Auth/LoginPage.aspx" class="MenuItem">
+                        Login / Register
+                    </a>
+                    <div class="MenuItem">
+                        Side Bar Menu 2
+                    </div>
+                </div>
+            </div>
+        </asp:Panel>
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+        <div class="PageFooter">
+            <a href="/HomePage.aspx" class="Logo">
+                TV-SERIES
+            </a>
+        </div>
+    </div>
+</body>
+</html>
