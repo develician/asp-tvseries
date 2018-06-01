@@ -74,6 +74,7 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <Content Include="Series\AllSeriesPage.aspx" />
     <Content Include="Styles\Auth\LoginPage.css">
       <DependentUpon>LoginPage.scss</DependentUpon>
     </Content>
@@ -164,6 +165,13 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Series\AllSeriesPage.aspx.cs">
+      <DependentUpon>AllSeriesPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Series\AllSeriesPage.aspx.designer.cs">
+      <DependentUpon>AllSeriesPage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

@@ -47,9 +47,9 @@
                     <a href="/Auth/LoginPage.aspx" class="MenuItem">
                         Login / Register
                     </a>
-                    <div class="MenuItem">
-                        Side Bar Menu 2
-                    </div>
+                    <a href="/Series/AllSeriesPage.aspx" class="MenuItem">
+                        모든 시리즈 보기
+                    </a>
                 </div>
             </div>
         </asp:Panel>
