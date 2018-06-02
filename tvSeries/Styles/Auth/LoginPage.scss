@@ -19,10 +19,30 @@
         text-align: center;
     }
 
+    .Errors {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        .ErrorLabel {
+            text-align: center;
+            color: #f03e3e;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+    }
+
     .Line {
         .Label {
             font-size: 1.25rem;
             font-weight: 600;
+        }
+
+        .Validation {
+            text-align: center;
+            color: #f03e3e;
+            font-size: 1.25rem;
+            font-weight: 700;
         }
 
         .InputWrapper {

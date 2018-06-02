@@ -7,72 +7,54 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace tvSeries.Auth {
+namespace tvSeries.Admin {
     
     
-    public partial class LoginPage {
+    public partial class UserManagement {
         
         /// <summary>
-        /// LoginPanel 컨트롤입니다.
+        /// UserDataList 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel LoginPanel;
+        protected global::System.Web.UI.WebControls.DataList UserDataList;
         
         /// <summary>
-        /// ErrorLabel 컨트롤입니다.
+        /// PaginationPanel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorLabel;
+        protected global::System.Web.UI.WebControls.Panel PaginationPanel;
         
         /// <summary>
-        /// IDValidator 컨트롤입니다.
+        /// PrevButton 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator IDValidator;
+        protected global::System.Web.UI.WebControls.Button PrevButton;
         
         /// <summary>
-        /// IDTextBox 컨트롤입니다.
+        /// PageLabel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IDTextBox;
+        protected global::System.Web.UI.WebControls.Label PageLabel;
         
         /// <summary>
-        /// PasswordValidator 컨트롤입니다.
+        /// NextButton 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordValidator;
-        
-        /// <summary>
-        /// PasswordTextBox 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
-        
-        /// <summary>
-        /// LoginButton 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginButton;
+        protected global::System.Web.UI.WebControls.Button NextButton;
     }
 }

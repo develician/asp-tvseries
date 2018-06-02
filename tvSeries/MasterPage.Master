@@ -24,7 +24,7 @@
             document.getElementById('<%= SideBarPanel.ClientID %>').style.visibility = 'hidden';
         }
 
-        
+
     </script>
 </head>
 <body>
@@ -34,21 +34,37 @@
                 <a href="/HomePage.aspx" class="Logo">TV-SERIES
                 </a>
                 <div class="Hamburger" onclick="ShowSideBar()">
-                    <i style="color: white; font-size: 1.5rem;margin-left: auto" class="fas fa-bars"></i>
+                    <i style="color: white; font-size: 1.5rem; margin-left: auto" class="fas fa-bars"></i>
                 </div>
             </div>
         </div>
-        <asp:Panel style="visibility: hidden;" ID="SideBarPanel" runat="server">
+        <asp:Panel Style="visibility: hidden;" ID="SideBarPanel" runat="server">
             <div class="SideBar">
                 <div class="Menus">
                     <div class="MenuItem" onclick="HideSideBar()">
                         Close
                     </div>
-                    <a href="/Auth/LoginPage.aspx" class="MenuItem">
-                        Login / Register
+                    <% if (HttpContext.Current.Session["username"] != null)
+                        {%>
+                    <a href="/Auth/MyPage.aspx" class="MenuItem">내 정보수정
                     </a>
-                    <a href="/Series/AllSeriesPage.aspx" class="MenuItem">
-                        모든 시리즈 보기
+                    <a href="/Auth/LogoutPage.aspx" class="MenuItem">Logout
+                    </a>
+                    <% if (Convert.ToInt32(HttpContext.Current.Session["admin"]) == 1)
+                        {%>
+                    <a href="/Admin/AdminHome.aspx" class="MenuItem">관리자 페이지로
+                    </a>
+                    <% } %>
+                    <% }
+                    else
+                    { %>
+                    <a href="/Auth/LoginPage.aspx" class="MenuItem">Login / Register
+                    </a>
+                    <% } %>
+
+
+
+                    <a href="/Series/AllSeriesPage.aspx" class="MenuItem">모든 시리즈 보기
                     </a>
                 </div>
             </div>
@@ -60,8 +76,7 @@
             </div>
         </form>
         <div class="PageFooter">
-            <a href="/HomePage.aspx" class="Logo">
-                TV-SERIES
+            <a href="/HomePage.aspx" class="Logo">TV-SERIES
             </a>
         </div>
     </div>

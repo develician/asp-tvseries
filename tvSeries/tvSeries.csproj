@@ -66,20 +66,62 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\UserDetail.aspx" />
+    <Content Include="Admin\UserManagement.aspx" />
     <Content Include="Auth\LoginPage.aspx" />
+    <Content Include="Auth\LogoutPage.aspx" />
+    <Content Include="Auth\MyPage.aspx" />
     <Content Include="Auth\RegisterPage.aspx" />
     <Content Include="MasterPage.Master" />
+    <Content Include="AdminPage.Master" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <None Include="packages.config" />
     <Content Include="Series\AllSeriesPage.aspx" />
+    <Content Include="Styles\Admin\AdminHome.css">
+      <DependentUpon>AdminHome.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\AdminHome.min.css">
+      <DependentUpon>AdminHome.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\AdminMenu.css">
+      <DependentUpon>AdminMenu.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\AdminMenu.min.css">
+      <DependentUpon>AdminMenu.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\AdminPageHeader.css">
+      <DependentUpon>AdminPageHeader.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\AdminPageHeader.min.css">
+      <DependentUpon>AdminPageHeader.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\UserDetail.css">
+      <DependentUpon>UserDetail.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\UserDetail.min.css">
+      <DependentUpon>UserDetail.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\UserManagement.css">
+      <DependentUpon>UserManagement.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\UserManagement.min.css">
+      <DependentUpon>UserManagement.css</DependentUpon>
+    </Content>
     <Content Include="Styles\Auth\LoginPage.css">
       <DependentUpon>LoginPage.scss</DependentUpon>
     </Content>
     <Content Include="Styles\Auth\LoginPage.min.css">
       <DependentUpon>LoginPage.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Auth\LogoutPage.css">
+      <DependentUpon>LogoutPage.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Auth\LogoutPage.min.css">
+      <DependentUpon>LogoutPage.css</DependentUpon>
     </Content>
     <Content Include="Styles\Base.css">
       <DependentUpon>Base.scss</DependentUpon>
@@ -124,6 +166,12 @@
     <Content Include="Styles\SideBar.scss" />
     <Content Include="Styles\PageFooter.scss" />
     <Content Include="Styles\Auth\LoginPage.scss" />
+    <Content Include="Styles\Auth\LogoutPage.scss" />
+    <Content Include="Styles\Admin\AdminHome.scss" />
+    <Content Include="Styles\Admin\AdminPageHeader.scss" />
+    <Content Include="Styles\Admin\AdminMenu.scss" />
+    <Content Include="Styles\Admin\UserManagement.scss" />
+    <Content Include="Styles\Admin\UserDetail.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -136,12 +184,54 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPage.Master.cs">
+      <DependentUpon>AdminPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage.Master.designer.cs">
+      <DependentUpon>AdminPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserDetail.aspx.cs">
+      <DependentUpon>UserDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserDetail.aspx.designer.cs">
+      <DependentUpon>UserDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserManagement.aspx.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserManagement.aspx.designer.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Auth\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Auth\LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\LogoutPage.aspx.cs">
+      <DependentUpon>LogoutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\LogoutPage.aspx.designer.cs">
+      <DependentUpon>LogoutPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\MyPage.aspx.cs">
+      <DependentUpon>MyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\MyPage.aspx.designer.cs">
+      <DependentUpon>MyPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Auth\RegisterPage.aspx.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>

@@ -26,5 +26,33 @@
   {
     "outputFile": "Styles/Auth/LoginPage.css",
     "inputFile": "Styles/Auth/LoginPage.scss"
+  },
+  {
+    "outputFile": "Styles/Auth/LogoutPage.css",
+    "inputFile": "Styles/Auth/LogoutPage.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/AdminHome.css",
+    "inputFile": "Styles/Admin/AdminHome.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/AdminPageHeader.css",
+    "inputFile": "Styles/Admin/AdminPageHeader.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/AdminMenu.css",
+    "inputFile": "Styles/Admin/AdminMenu.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/UserManagement.css",
+    "inputFile": "Styles/Admin/UserManagement.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/UserDetail.css",
+    "inputFile": "Styles/Admin/UserDetail.scss"
+  },
+  {
+    "outputFile": "Styles/Auth/MyPage.css",
+    "inputFile": "Styles/Auth/MyPage.scss"
   }
 ]

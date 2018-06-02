@@ -10,106 +10,106 @@
 namespace tvSeries.Auth {
     
     
-    public partial class RegisterPage {
+    public partial class MyPage {
         
         /// <summary>
-        /// LoginPanel 컨트롤입니다.
+        /// UserMultiView 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel LoginPanel;
+        protected global::System.Web.UI.WebControls.MultiView UserMultiView;
         
         /// <summary>
-        /// ErrorLabel 컨트롤입니다.
+        /// NonUpdateView 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorLabel;
+        protected global::System.Web.UI.WebControls.View NonUpdateView;
         
         /// <summary>
-        /// IDValidator 컨트롤입니다.
+        /// IDLabel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator IDValidator;
+        protected global::System.Web.UI.WebControls.Label IDLabel;
         
         /// <summary>
-        /// IDTextBox 컨트롤입니다.
+        /// IDContentLabel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IDTextBox;
+        protected global::System.Web.UI.WebControls.Label IDContentLabel;
         
         /// <summary>
-        /// PasswordValidator 컨트롤입니다.
+        /// EmailLabel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordValidator;
+        protected global::System.Web.UI.WebControls.Label EmailLabel;
         
         /// <summary>
-        /// PasswordCompareValidator 컨트롤입니다.
+        /// EmailContentLabel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator PasswordCompareValidator;
+        protected global::System.Web.UI.WebControls.Label EmailContentLabel;
         
         /// <summary>
-        /// PasswordTextBox 컨트롤입니다.
+        /// UpdateViewButton 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
+        protected global::System.Web.UI.WebControls.Button UpdateViewButton;
         
         /// <summary>
-        /// PasswordCheckValidator 컨트롤입니다.
+        /// UpdateView 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordCheckValidator;
+        protected global::System.Web.UI.WebControls.View UpdateView;
         
         /// <summary>
-        /// PasswordCheckTextBox 컨트롤입니다.
+        /// Label1 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordCheckTextBox;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// EmailEmptyValidator 컨트롤입니다.
+        /// IDUpdateViewLabel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailEmptyValidator;
+        protected global::System.Web.UI.WebControls.Label IDUpdateViewLabel;
         
         /// <summary>
-        /// EmailValidator 컨트롤입니다.
+        /// Label3 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailValidator;
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
         /// EmailTextBox 컨트롤입니다.
@@ -121,12 +121,12 @@ namespace tvSeries.Auth {
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
         
         /// <summary>
-        /// RegisterButton 컨트롤입니다.
+        /// Button1 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterButton;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

@@ -7,72 +7,63 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace tvSeries.Auth {
+namespace tvSeries.Admin {
     
     
-    public partial class LoginPage {
+    public partial class UserDetail {
         
         /// <summary>
-        /// LoginPanel 컨트롤입니다.
+        /// UserDetailPanel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel LoginPanel;
+        protected global::System.Web.UI.WebControls.Panel UserDetailPanel;
         
         /// <summary>
-        /// ErrorLabel 컨트롤입니다.
+        /// IDLabel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorLabel;
+        protected global::System.Web.UI.WebControls.Label IDLabel;
         
         /// <summary>
-        /// IDValidator 컨트롤입니다.
+        /// IDContentLabel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator IDValidator;
+        protected global::System.Web.UI.WebControls.Label IDContentLabel;
         
         /// <summary>
-        /// IDTextBox 컨트롤입니다.
+        /// EmailLabel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IDTextBox;
+        protected global::System.Web.UI.WebControls.Label EmailLabel;
         
         /// <summary>
-        /// PasswordValidator 컨트롤입니다.
+        /// EmailContentLabel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordValidator;
+        protected global::System.Web.UI.WebControls.Label EmailContentLabel;
         
         /// <summary>
-        /// PasswordTextBox 컨트롤입니다.
+        /// Button 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
-        
-        /// <summary>
-        /// LoginButton 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginButton;
+        protected global::System.Web.UI.WebControls.Button Button;
     }
 }

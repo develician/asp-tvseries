@@ -1,0 +1,6 @@
+﻿.AdminPageTemplate {
+  display: flex;
+  flex-direction: column; }
+  .AdminPageTemplate .MainForm {
+    min-height: calc(100vh - 15rem); }
+

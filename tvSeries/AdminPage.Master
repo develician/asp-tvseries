@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPage.master.cs" Inherits="tvSeries.AdminPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="~/Styles/Admin/AdminHome.css" />
+    <link rel="stylesheet" href="~/Styles/Admin/AdminPageHeader.css" />
+    <link rel="stylesheet" href="~/Styles/Base.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <script runat="server">
+            protected void Page_Load(object sender, EventArgs e)
+            {
+                if (!Page.IsPostBack)
+                {
+                    if (Session["admin"] == null || Convert.ToInt32(Session["admin"]) == 0)
+                    {
+                        Response.Redirect("/HomePage.aspx");
+                    }
+                }
+            }
+
+
+        </script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="AdminPageTemplate">
+        <div class="AdminPageHeader">
+            <div class="Contents">
+                <a href="/Admin/AdminHome.aspx" class="Logo">관리자 페이지</a>
+                <div class="Right">
+                    <a href="/HomePage.aspx" class="Menu">
+                        본 페이지로
+                    </a>
+                </div>
+            </div>
+        </div>
+        <form id="form1" runat="server" class="MainForm">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

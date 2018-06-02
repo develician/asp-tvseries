@@ -1,0 +1,1 @@
+﻿.ButtonWrapper{width:1024px;margin:0 auto;margin-top:3rem;}@media(max-width:1024px){.ButtonWrapper{width:90%;}}.ButtonWrapper .Contents{display:flex;}.ButtonWrapper .Contents .Button{text-align:center;background:#845ef7;font-weight:700;font-size:1.5rem;color:#fff;padding:2rem;margin:1rem;flex:1;}

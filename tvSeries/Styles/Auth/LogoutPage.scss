@@ -1,0 +1,75 @@
+﻿@import '../Utils.scss';
+
+.LogoutPanel {
+    width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: white;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: $break-medium) {
+        width: 90%;
+    }
+
+    .Contents {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .Label {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .ButtonWrapper {
+            margin-top: 1rem;
+
+            .LogoutButton {
+                border: none;
+                outline: none;
+                flex: 1;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: white;
+                background: #f03e3e;
+                user-select: none;
+                cursor: pointer;
+
+                &:hover {
+                    background: #fa5252;
+                }
+
+                &:active {
+                    background: #f03e3e;
+                }
+            }
+
+            .BackButton {
+                border: none;
+                outline: none;
+                flex: 1;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: white;
+                background: #7950f2;
+                user-select: none;
+                cursor: pointer;
+
+                &:hover {
+                    background: #845ef7;
+                }
+
+                &:active {
+                    background: #7950f2;
+                }
+            }
+        }
+    }
+}

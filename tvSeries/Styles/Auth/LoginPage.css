@@ -13,9 +13,23 @@
     font-size: 1.5rem;
     font-weight: 800;
     text-align: center; }
+  .LoginPanel .Errors {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; }
+    .LoginPanel .Errors .ErrorLabel {
+      text-align: center;
+      color: #f03e3e;
+      font-size: 1.25rem;
+      font-weight: 700; }
   .LoginPanel .Line .Label {
     font-size: 1.25rem;
     font-weight: 600; }
+  .LoginPanel .Line .Validation {
+    text-align: center;
+    color: #f03e3e;
+    font-size: 1.25rem;
+    font-weight: 700; }
   .LoginPanel .Line .InputWrapper {
     margin-top: 1rem;
     display: flex; }
