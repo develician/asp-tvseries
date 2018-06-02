@@ -123,6 +123,12 @@
     <Content Include="Styles\Auth\LogoutPage.min.css">
       <DependentUpon>LogoutPage.css</DependentUpon>
     </Content>
+    <Content Include="Styles\Auth\MyPage.css">
+      <DependentUpon>MyPage.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Auth\MyPage.min.css">
+      <DependentUpon>MyPage.css</DependentUpon>
+    </Content>
     <Content Include="Styles\Base.css">
       <DependentUpon>Base.scss</DependentUpon>
     </Content>
@@ -172,6 +178,7 @@
     <Content Include="Styles\Admin\AdminMenu.scss" />
     <Content Include="Styles\Admin\UserManagement.scss" />
     <Content Include="Styles\Admin\UserDetail.scss" />
+    <Content Include="Styles\Auth\MyPage.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
