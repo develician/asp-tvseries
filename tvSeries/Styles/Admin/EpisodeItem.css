@@ -1,0 +1,37 @@
+﻿.EpisodeItem .episode-thumbnail {
+  position: relative;
+  padding-top: 55%; }
+  .EpisodeItem .episode-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .EpisodeItem .episode-thumbnail .play-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.1s ease-in; }
+    .EpisodeItem .episode-thumbnail .play-circle:hover {
+      transform: translate(-50%, -50%) scale(1.2, 1.2); }
+
+.EpisodeItem .title {
+  margin-top: 0.5rem;
+  font-weight: 500; }
+
+.EpisodeItem:hover .episode-thumbnail .play-circle {
+  opacity: 1; }
+

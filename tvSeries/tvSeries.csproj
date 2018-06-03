@@ -67,6 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\Editor.aspx" />
+    <Content Include="Admin\PostDetail.aspx" />
+    <Content Include="Admin\PostManagement.aspx" />
     <Content Include="Admin\UserDetail.aspx" />
     <Content Include="Admin\UserManagement.aspx" />
     <Content Include="Auth\LoginPage.aspx" />
@@ -81,6 +84,7 @@
     </None>
     <None Include="packages.config" />
     <Content Include="Series\AllSeriesPage.aspx" />
+    <Content Include="Series\PostDetail.aspx" />
     <Content Include="Styles\Admin\AdminHome.css">
       <DependentUpon>AdminHome.scss</DependentUpon>
     </Content>
@@ -98,6 +102,42 @@
     </Content>
     <Content Include="Styles\Admin\AdminPageHeader.min.css">
       <DependentUpon>AdminPageHeader.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\Editor.css">
+      <DependentUpon>Editor.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\Editor.min.css">
+      <DependentUpon>Editor.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\EpisodeItem.css">
+      <DependentUpon>EpisodeItem.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\EpisodeItem.min.css">
+      <DependentUpon>EpisodeItem.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\EpisodeItemList.css">
+      <DependentUpon>EpisodeItemList.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\EpisodeItemList.min.css">
+      <DependentUpon>EpisodeItemList.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\PostDetail.css">
+      <DependentUpon>PostDetail.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\PostDetail.min.css">
+      <DependentUpon>PostDetail.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\PostManagement.css">
+      <DependentUpon>PostManagement.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\PostManagement.min.css">
+      <DependentUpon>PostManagement.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\SeriesMain.css">
+      <DependentUpon>SeriesMain.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Admin\SeriesMain.min.css">
+      <DependentUpon>SeriesMain.css</DependentUpon>
     </Content>
     <Content Include="Styles\Admin\UserDetail.css">
       <DependentUpon>UserDetail.scss</DependentUpon>
@@ -179,6 +219,13 @@
     <Content Include="Styles\Admin\UserManagement.scss" />
     <Content Include="Styles\Admin\UserDetail.scss" />
     <Content Include="Styles\Auth\MyPage.scss" />
+    <Content Include="Styles\Admin\Editor.scss" />
+    <Content Include="Styles\Admin\PostManagement.scss" />
+    <Content Include="Styles\Admin\PostDetail.scss" />
+    <Content Include="Styles\Admin\SeriesMain.scss" />
+    <Content Include="Styles\Admin\EpisodeItemList.scss" />
+    <Content Include="Styles\Admin\EpisodeItem.scss" />
+    <Content Include="PostDetail.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -204,6 +251,27 @@
     </Compile>
     <Compile Include="Admin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor.aspx.cs">
+      <DependentUpon>Editor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor.aspx.designer.cs">
+      <DependentUpon>Editor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PostDetail.aspx.cs">
+      <DependentUpon>PostDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PostDetail.aspx.designer.cs">
+      <DependentUpon>PostDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PostManagement.aspx.cs">
+      <DependentUpon>PostManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PostManagement.aspx.designer.cs">
+      <DependentUpon>PostManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\UserDetail.aspx.cs">
       <DependentUpon>UserDetail.aspx</DependentUpon>
@@ -269,8 +337,24 @@
     <Compile Include="Series\AllSeriesPage.aspx.designer.cs">
       <DependentUpon>AllSeriesPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PostDetail.Master.cs">
+      <DependentUpon>PostDetail.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostDetail.Master.designer.cs">
+      <DependentUpon>PostDetail.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Series\PostDetail.aspx.cs">
+      <DependentUpon>PostDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Series\PostDetail.aspx.designer.cs">
+      <DependentUpon>PostDetail.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

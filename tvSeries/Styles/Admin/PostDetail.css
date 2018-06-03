@@ -1,0 +1,126 @@
+﻿.SeriesHeader {
+  width: 100%;
+  height: 350px;
+  background: #cc5de8; }
+  @media (max-width: 1024px) {
+    .SeriesHeader {
+      height: 250px; } }
+  .SeriesHeader .Wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    @media (max-width: 1600px) {
+      .SeriesHeader .Wrapper {
+        width: 1200px; } }
+    @media (max-width: 1200px) {
+      .SeriesHeader .Wrapper {
+        width: 1024px; } }
+    @media (max-width: 1024px) {
+      .SeriesHeader .Wrapper {
+        width: 768px; } }
+    @media (max-width: 768px) {
+      .SeriesHeader .Wrapper {
+        width: 100%; } }
+    .SeriesHeader .Wrapper header {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      display: flex;
+      width: 100%;
+      align-items: center; }
+      .SeriesHeader .Wrapper header .Logo {
+        margin-top: 0.5rem;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 800; }
+      .SeriesHeader .Wrapper header .menu-button {
+        margin-left: auto;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer; }
+    .SeriesHeader .Wrapper .header-contents {
+      flex: 1;
+      display: flex; }
+      .SeriesHeader .Wrapper .header-contents .thumbnail-area {
+        width: 300px;
+        position: relative;
+        padding-top: 100px; }
+        @media (max-width: 1024px) {
+          .SeriesHeader .Wrapper .header-contents .thumbnail-area {
+            padding-top: 50px;
+            width: 150px; } }
+        @media (max-width: 768px) {
+          .SeriesHeader .Wrapper .header-contents .thumbnail-area {
+            display: none; } }
+        .SeriesHeader .Wrapper .header-contents .thumbnail-area .floating-thumbnail {
+          width: 300px;
+          height: 445px;
+          background: black;
+          position: absolute;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+          @media (max-width: 1024px) {
+            .SeriesHeader .Wrapper .header-contents .thumbnail-area .floating-thumbnail {
+              width: 150px;
+              height: 222px; } }
+          .SeriesHeader .Wrapper .header-contents .thumbnail-area .floating-thumbnail img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+      .SeriesHeader .Wrapper .header-contents .information {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        padding: 1.5rem;
+        color: white;
+        position: relative; }
+        .SeriesHeader .Wrapper .header-contents .information h1 {
+          font-size: 4rem;
+          margin: 0; }
+        .SeriesHeader .Wrapper .header-contents .information .sub-info {
+          padding-left: 0.25rem;
+          font-size: 1.25rem; }
+          .SeriesHeader .Wrapper .header-contents .information .sub-info span + span {
+            margin-left: 1.5rem; }
+        @media (max-width: 1024px) {
+          .SeriesHeader .Wrapper .header-contents .information h1 {
+            font-size: 2rem; }
+          .SeriesHeader .Wrapper .header-contents .information .sub-info {
+            font-size: 1rem; } }
+        .SeriesHeader .Wrapper .header-contents .information .ButtonWrapper {
+          height: 2.5rem;
+          width: 10rem;
+          border: 2px solid white;
+          color: white;
+          position: absolute;
+          right: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 1.25rem;
+          cursor: pointer;
+          transition: 0.1s ease-in-out all; }
+          @media (max-width: 768px) {
+            .SeriesHeader .Wrapper .header-contents .information .ButtonWrapper {
+              display: none; } }
+          .SeriesHeader .Wrapper .header-contents .information .ButtonWrapper svg {
+            font-size: 1.5rem;
+            margin-right: 0.5rem; }
+          .SeriesHeader .Wrapper .header-contents .information .ButtonWrapper:hover {
+            background: white;
+            color: #cc5de8;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+          .SeriesHeader .Wrapper .header-contents .information .ButtonWrapper .Button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700; }
+            .SeriesHeader .Wrapper .header-contents .information .ButtonWrapper .Button:hover {
+              color: black; }
+

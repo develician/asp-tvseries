@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="tvSeries.HomePage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPage.Master" AutoEventWireup="true" CodeBehind="PostManagement.aspx.cs" Inherits="tvSeries.Admin.PostManagement" %>
 
 <%@ Import Namespace="System.Data.SqlClient" %>
 <%@ Import Namespace="System.Data" %>
@@ -77,12 +77,12 @@
 
             if (pagedDataSource.IsLastPage)
             {
-                Response.Redirect("/HomePage.aspx?page=" + (currentPage));
+                Response.Redirect("/Admin/PostManagement.aspx?page=" + (currentPage));
                 return;
             }
 
 
-            Response.Redirect("/HomePage.aspx?page=" + urlPage);
+            Response.Redirect("/Admin/PostManagement.aspx?page=" + urlPage);
         }
 
         protected void PrevPageAction(object sender, EventArgs e)
@@ -93,10 +93,10 @@
 
             if (pagedDataSource.IsFirstPage)
             {
-                Response.Redirect("/HomePage.aspx?page=" + (currentPage));
+                Response.Redirect("/Admin/PostManagement.aspx?page=" + (currentPage));
                 return;
             }
-            Response.Redirect("/HomePage.aspx?page=" + urlPage);
+            Response.Redirect("/Admin/PostManagement.aspx?page=" + urlPage);
         }
 
     </script>
@@ -107,26 +107,26 @@
             <ItemTemplate>
                 <div class="PostItem">
                     <div class="Left">
-                        <a href="/Series/PostDetail.aspx?id=<%# Eval("id") %>">
+                        <a href="/Admin/PostDetail.aspx?id=<%# Eval("id") %>">
                             <img src="/Uploads/<%# Eval("trailerImage").ToString().Split(',')[0] %>" />
                         </a>
                     </div>
                     <div class="Right">
 
                         <div class="Title">
-                            <a href="/Series/PostDetail.aspx?id=<%# Eval("id") %>">
-                                <%# Eval("title") %>
-                            </a>
+                            <a href="/Admin/PostDetail.aspx?id=<%# Eval("id") %>">
+                            <%# Eval("title") %>
+                                </a>
                         </div>
                         <div class="Genre">
-                            <a href="/Series/PostDetail.aspx?id=<%# Eval("id") %>">
-                                <%# Eval("genre") %>
-                            </a>
+                            <a href="/Admin/PostDetail.aspx?id=<%# Eval("id") %>">
+                            <%# Eval("genre") %>
+                                </a>
                         </div>
                         <div class="Year">
-                            <a href="/Series/PostDetail.aspx?id=<%# Eval("id") %>">
-                                <%# Eval("year") %>
-                            </a>
+                            <a href="/Admin/PostDetail.aspx?id=<%# Eval("id") %>">
+                            <%# Eval("year") %>
+                                </a>
                         </div>
                     </div>
                 </div>

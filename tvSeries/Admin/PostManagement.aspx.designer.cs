@@ -7,10 +7,10 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace tvSeries {
+namespace tvSeries.Admin {
     
     
-    public partial class HomePage {
+    public partial class PostManagement {
         
         /// <summary>
         /// PostDataList 컨트롤입니다.

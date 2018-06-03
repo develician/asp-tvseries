@@ -6,8 +6,8 @@
     <div class="ButtonWrapper">
         <div class="Contents">
             <a href="/Admin/UserManagement.aspx" class="Button">유저관리</a>
-            <a href="/Admin/UserManagement.aspx" class="Button">포스팅</a>
-            <a href="/Admin/UserManagement.aspx" class="Button">포스트 관리</a>
+            <a href="/Admin/Editor.aspx" class="Button">포스팅</a>
+            <a href="/Admin/PostManagement.aspx" class="Button">포스트 관리</a>
         </div>
     </div>
 </asp:Content>

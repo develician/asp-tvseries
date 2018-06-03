@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PostDetail.master.cs" Inherits="tvSeries.Series.PostDetail" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="~/Styles/Base.css" />
+    <link rel="stylesheet" href="~/Styles/Admin/PostDetail.css" />
+    <link rel="stylesheet" href="~/Styles/Admin/SeriesMain.css" />
+    <link rel="stylesheet" href="~/Styles/Admin/EpisodeItemList.css" />
+    <link rel="stylesheet" href="~/Styles/Admin/EpisodeItem.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <script runat="server">
+            protected void Page_Load(object sender, EventArgs e)
+            {
+                if(Session["username"] == null)
+                {
+                    Response.Redirect("/Auth/LoginPage.aspx");
+                }
+            }
+        </script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

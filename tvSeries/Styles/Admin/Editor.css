@@ -1,0 +1,87 @@
+﻿.EditorForm {
+  width: 1024px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  @media (max-width: 1024px) {
+    .EditorForm {
+      width: 90%; } }
+  .EditorForm:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  .EditorForm .Content {
+    display: flex;
+    flex-direction: column; }
+    .EditorForm .Content .Line {
+      display: flex;
+      flex-direction: column; }
+      .EditorForm .Content .Line .Label {
+        font-size: 1.5rem;
+        font-weight: 600; }
+      .EditorForm .Content .Line .ErrorMessage {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #e03131;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem; }
+      .EditorForm .Content .Line .InputWrapper {
+        display: flex; }
+        .EditorForm .Content .Line .InputWrapper .Input {
+          flex: 1;
+          width: 100%;
+          height: 2rem;
+          font-size: 1.5rem;
+          border: 1px solid #495057;
+          outline: none; }
+        .EditorForm .Content .Line .InputWrapper .TextArea {
+          flex: 1;
+          width: 100%;
+          height: 10rem;
+          font-size: 1.5rem; }
+      .EditorForm .Content .Line .Label + .InputWrapper {
+        margin-top: 1rem; }
+    .EditorForm .Content .Line + .Line {
+      margin-top: 2rem; }
+    .EditorForm .Content .ButtonWrapper {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      display: flex;
+      justify-content: center; }
+      .EditorForm .Content .ButtonWrapper .Button + .DeleteButton {
+        margin-left: 1rem; }
+      .EditorForm .Content .ButtonWrapper .Button {
+        border: none;
+        outline: none;
+        flex: 1;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: white;
+        background: #4c6ef5;
+        user-select: none;
+        cursor: pointer; }
+        .EditorForm .Content .ButtonWrapper .Button:hover {
+          background: #5c7cfa; }
+        .EditorForm .Content .ButtonWrapper .Button:active {
+          background: #4c6ef5; }
+      .EditorForm .Content .ButtonWrapper .DeleteButton {
+        border: none;
+        outline: none;
+        flex: 1;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: white;
+        background: #e03131;
+        user-select: none;
+        cursor: pointer; }
+        .EditorForm .Content .ButtonWrapper .DeleteButton:hover {
+          background: #f03e3e; }
+        .EditorForm .Content .ButtonWrapper .DeleteButton:active {
+          background: #e03131; }
+

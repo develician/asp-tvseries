@@ -54,5 +54,29 @@
   {
     "outputFile": "Styles/Auth/MyPage.css",
     "inputFile": "Styles/Auth/MyPage.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/Editor.css",
+    "inputFile": "Styles/Admin/Editor.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/PostManagement.css",
+    "inputFile": "Styles/Admin/PostManagement.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/PostDetail.css",
+    "inputFile": "Styles/Admin/PostDetail.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/SeriesMain.css",
+    "inputFile": "Styles/Admin/SeriesMain.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/EpisodeItemList.css",
+    "inputFile": "Styles/Admin/EpisodeItemList.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/EpisodeItem.css",
+    "inputFile": "Styles/Admin/EpisodeItem.scss"
   }
 ]

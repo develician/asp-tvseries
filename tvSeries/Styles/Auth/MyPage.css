@@ -8,6 +8,16 @@
   @media (max-width: 1024px) {
     .MyInfoForm {
       width: 90%; } }
+  .MyInfoForm .ErrorMessage {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center; }
+    .MyInfoForm .ErrorMessage .ErrorContent {
+      font-size: 1.5rem;
+      color: #e03131;
+      text-align: center;
+      font-weight: 600; }
   .MyInfoForm .Line {
     display: flex;
     flex-direction: column; }
@@ -17,7 +27,12 @@
     .MyInfoForm .Line .ContentLabel {
       font-size: 1.25rem;
       font-weight: 500; }
+    .MyInfoForm .Line .ContentInput {
+      height: 2rem;
+      font-size: 1.25rem; }
     .MyInfoForm .Line .Label + .ContentLabel {
+      margin-top: 1rem; }
+    .MyInfoForm .Line .Label + .ContentInput {
       margin-top: 1rem; }
   .MyInfoForm .Line + .Line {
     margin-top: 2rem; }
@@ -43,4 +58,6 @@
         background: #d6336c; }
       .MyInfoForm .ButtonWrapper .UpdateButton:active {
         background: #c2255c; }
+    .MyInfoForm .ButtonWrapper .UpdateButton + .UpdateButton {
+      margin-left: 1rem; }
 

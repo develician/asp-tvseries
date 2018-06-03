@@ -1,0 +1,126 @@
+﻿.EditorForm {
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 1024px) {
+        width: 90%;
+    }
+
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    &:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    .Content {
+        display: flex;
+        flex-direction: column;
+
+        .Line {
+            display: flex;
+            flex-direction: column;
+
+            .Label {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            .ErrorMessage {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #e03131;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .InputWrapper {
+                display: flex;
+
+                .Input {
+                    flex: 1;
+                    width: 100%;
+                    height: 2rem;
+                    font-size: 1.5rem;
+                    border: 1px solid #495057;
+                    outline: none;
+                }
+
+                .TextArea {
+                    flex: 1;
+                    width: 100%;
+                    height: 10rem;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .Label + .InputWrapper {
+                margin-top: 1rem;
+            }
+        }
+
+        .Line + .Line {
+            margin-top: 2rem;
+        }
+
+        .ButtonWrapper {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+
+
+            .Button + .DeleteButton {
+                margin-left: 1rem;
+            }
+
+            .Button {
+                border: none;
+                outline: none;
+                flex: 1;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: white;
+                background: #4c6ef5;
+                user-select: none;
+                cursor: pointer;
+
+                &:hover {
+                    background: #5c7cfa;
+                }
+
+                &:active {
+                    background: #4c6ef5;
+                }
+            }
+
+            .DeleteButton {
+                border: none;
+                outline: none;
+                flex: 1;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: white;
+                background: #e03131;
+                user-select: none;
+                cursor: pointer;
+
+                &:hover {
+                    background: #f03e3e;
+                }
+
+                &:active {
+                    background: #e03131;
+                }
+            }
+        }
+    }
+}
