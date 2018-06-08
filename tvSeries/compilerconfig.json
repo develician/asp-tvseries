@@ -78,5 +78,9 @@
   {
     "outputFile": "Styles/Admin/EpisodeItem.css",
     "inputFile": "Styles/Admin/EpisodeItem.scss"
+  },
+  {
+    "outputFile": "Styles/Series/Category.css",
+    "inputFile": "Styles/Series/Category.scss"
   }
 ]

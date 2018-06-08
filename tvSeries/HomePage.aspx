@@ -25,6 +25,7 @@
             if (!Page.IsPostBack)
             {
                 GetPostList(currentPage);
+                PageLabel.Text = "Page " + currentPage;
             }
         }
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPage.Master" AutoEventWireup="true" CodeBehind="PostManagement.aspx.cs" Inherits="tvSeries.Admin.PostManagement" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Category.aspx.cs" Inherits="tvSeries.Series.Category" %>
 
 <%@ Import Namespace="System.Data.SqlClient" %>
 <%@ Import Namespace="System.Data" %>
@@ -11,7 +11,7 @@
         {
 
 
-            if (Request.QueryString["page"] != null)
+            if (Request.QueryString["page"] != null && Request.QueryString["genre"] != null)
             {
                 currentPage = Int32.Parse(Request.QueryString["page"].ToString());
             }
@@ -20,21 +20,21 @@
                 currentPage = 1;
             }
 
-
-
             if (!Page.IsPostBack)
             {
-                GetPostList(currentPage);
+                GetSeriesByGenre(Request.QueryString["genre"], currentPage);
                 PageLabel.Text = "Page " + currentPage;
             }
+
         }
 
-        protected void GetPostList(int currentPage)
+        protected void GetSeriesByGenre(string genre, int currentPage)
         {
             SqlConnection conn =
                 new SqlConnection("Data Source=.\\SQLEXPRESS; Initial Catalog=MyDB; Integrated Security=False; uid=killi8n; pwd=admin1234");
-            String SQL = "SELECT * FROM tvseries.dbo.Series ORDER BY id DESC";
+            String SQL = "SELECT * FROM tvseries.dbo.Series WHERE genre LIKE '%" + Request.QueryString["genre"] + "%'";
             SqlCommand command = new SqlCommand(SQL, conn);
+            //command.Parameters.AddWithValue("@Genre", Request.QueryString["genre"]);
 
             try
             {
@@ -55,9 +55,6 @@
                 PostDataList.DataSource = pagedDataSource;
                 PostDataList.DataBind();
 
-
-
-
             }
             catch (Exception exception)
             {
@@ -67,77 +64,74 @@
             {
                 conn.Close();
             }
-
         }
 
         protected void NextPageAction(object sender, EventArgs e)
         {
             int urlPage = currentPage + 1;
 
-            GetPostList(currentPage);
+            GetSeriesByGenre(Request.QueryString["genre"], currentPage);
 
             if (pagedDataSource.IsLastPage)
             {
-                Response.Redirect("/Admin/PostManagement.aspx?page=" + (currentPage));
+                Response.Redirect("/Series/Category.aspx?genre=" + Request.QueryString["genre"] + "&page=" + (currentPage));
                 return;
             }
 
 
-            Response.Redirect("/Admin/PostManagement.aspx?page=" + urlPage);
+            Response.Redirect("/Series/Category.aspx?genre=" + Request.QueryString["genre"] + "&page=" + urlPage);
         }
 
         protected void PrevPageAction(object sender, EventArgs e)
         {
             int urlPage = currentPage - 1;
 
-            GetPostList(currentPage);
+            GetSeriesByGenre(Request.QueryString["genre"], currentPage);
 
             if (pagedDataSource.IsFirstPage)
             {
-                Response.Redirect("/Admin/PostManagement.aspx?page=" + (currentPage));
+                Response.Redirect("/Series/Category.aspx?genre=" + Request.QueryString["genre"] + "&page=" + (currentPage));
                 return;
             }
-            Response.Redirect("/Admin/PostManagement.aspx?page=" + urlPage);
+            Response.Redirect("/Series/Category.aspx?genre=" + Request.QueryString["genre"] + "&page=" + urlPage);
         }
-
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="PostManagementForm">
-        <asp:DataList CssClass="PostDataList" runat="server" ID="PostDataList" RepeatDirection="Vertical">
+        <asp:datalist cssclass="PostDataList" runat="server" id="PostDataList" repeatdirection="Vertical">
             <ItemTemplate>
                 <div class="PostItem">
                     <div class="Left">
-                        <a href="/Admin/PostDetail.aspx?id=<%# Eval("id") %>">
+                        <a href="/Series/PostDetail.aspx?id=<%# Eval("id") %>">
                             <img src="/Uploads/<%# Eval("trailerImage").ToString().Split(',')[0] %>" />
                         </a>
                     </div>
                     <div class="Right">
 
                         <div class="Title">
-                            <a href="/Admin/PostDetail.aspx?id=<%# Eval("id") %>">
-                            <%# Eval("title") %>
-                                </a>
+                            <a href="/Series/PostDetail.aspx?id=<%# Eval("id") %>">
+                                <%# Eval("title") %>
+                            </a>
                         </div>
                         <div class="Genre">
-                            <a href="/Admin/PostDetail.aspx?id=<%# Eval("id") %>">
-                            <%# Eval("genre") %>
-                                </a>
+                            <a href="/Series/PostDetail.aspx?id=<%# Eval("id") %>">
+                                <%# Eval("genre") %>
+                            </a>
                         </div>
                         <div class="Year">
-                            <a href="/Admin/PostDetail.aspx?id=<%# Eval("id") %>">
-                            <%# Eval("year") %>
-                                </a>
+                            <a href="/Series/PostDetail.aspx?id=<%# Eval("id") %>">
+                                <%# Eval("year") %>
+                            </a>
                         </div>
                     </div>
                 </div>
             </ItemTemplate>
-        </asp:DataList>
-
+        </asp:datalist>
     </div>
     <div class="Pagination">
-        <asp:Button runat="server" ID="PrevButton" CssClass="Button" Text="Prev" OnClick="PrevPageAction" />
-        <asp:Label runat="server" ID="PageLabel" CssClass="PageLabel" Text="Page 1"></asp:Label>
-        <asp:Button runat="server" ID="Button1" CssClass="Button" Text="Next" OnClick="NextPageAction" />
+        <asp:button runat="server" id="PrevButton" cssclass="Button" text="Prev" onclick="PrevPageAction" />
+        <asp:label runat="server" id="PageLabel" cssclass="PageLabel" text="Page 1"></asp:label>
+        <asp:button runat="server" id="Button1" cssclass="Button" text="Next" onclick="NextPageAction" />
     </div>
 </asp:Content>

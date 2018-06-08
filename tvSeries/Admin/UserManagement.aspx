@@ -24,6 +24,7 @@
             if (!Page.IsPostBack)
             {
                 GetUserList(CurrentPage);
+                PageLabel.Text = "Page " + CurrentPage;
             }
         }
 

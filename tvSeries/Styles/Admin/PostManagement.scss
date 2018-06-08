@@ -1,4 +1,6 @@
-﻿.PostManagementForm {
+﻿@import '../Utils.scss';
+
+.PostManagementForm {
     width: 1024px;
     margin: 0 auto;
     margin-top: 1rem;
@@ -23,12 +25,29 @@
         .PostItem {
             display: flex;
 
+
+
             .Left {
                 flex: 0.3;
 
                 img {
                     width: 250px;
                     height: 250px;
+
+                    @media screen and (max-width: $break-large) {
+                        width: 180px;
+                        height: 180px;
+                    }
+
+                    @media screen and (width: 768px) {
+                        width: 180px !important;
+                        height: 180px !important;
+                    }
+
+                    @media screen and (max-width: $break-medium) {
+                        width: 100px;
+                        height: 100px;
+                    }
                 }
             }
 
@@ -37,23 +56,39 @@
                 display: flex;
                 flex-direction: column;
 
+                @media (max-width: $break-medium) {
+                    margin-left: 1rem;
+                }
+
                 .Title {
                     font-size: 1.5rem;
                     font-weight: 600;
+
+                    @media (max-width: $break-medium) {
+                        font-size: 1rem;
+                        font-weight: 600;
+                    }
                 }
 
                 .Genre {
                     margin-top: 1rem;
+
+
+                    @media (max-width: $break-medium) {
+                        font-size: 0.8rem;
+                    }
                 }
 
                 .Year {
                     margin-top: 1rem;
+
+                    @media (max-width: $break-medium) {
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }
     }
-
-   
 }
 
 .Pagination {
@@ -63,6 +98,10 @@
     margin: 0 auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
+    @media (max-width: 1024px) {
+        width: 90%;
+    }
 
     .Button {
         border: none;

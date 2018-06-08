@@ -29,15 +29,35 @@
 
                 SqlDataReader rd = command.ExecuteReader();
 
+                String genreStr = "";
+
                 while (rd.Read())
                 {
+                    String[] genreArr = rd["genre"].ToString().Split('/');
+
+                    int i = 0;
+                    foreach (var item in genreArr)
+                    {
+                        if (i == genreArr.Length - 1) {
+                            GenreLabel.Text += "<a href='/Series/Category.aspx?genre=" + genreArr[i].ToString() +  "'>" + genreArr[i].ToString() + "</a>";
+                        } else
+                        {
+                            GenreLabel.Text += "<a href='/Series/Category.aspx?genre=" + genreArr[i].ToString() +  "'>" + genreArr[i].ToString() + "</a>" + " / ";
+                        }
+                        
+                        i++;
+                    }
+
                     ThumbnailImage.ImageUrl = "/Uploads/" + rd["trailerImage"].ToString().Split(',')[0];
                     TitleLabel.Text = rd["title"].ToString();
-                    GenreLabel.Text = rd["genre"].ToString();
+                    //GenreLabel.Text = rd["genre"].ToString();
+                    //GenreLabel.Text = genreArr[0];
                     YearLabel.Text = rd["year"].ToString();
                     trailerImageStr = rd["trailerImage"].ToString();
                     StoryLabel.Text = rd["story"].ToString();
                 }
+
+
 
                 trailerImageArr = trailerImageStr.Split(',');
             }

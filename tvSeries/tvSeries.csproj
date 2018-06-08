@@ -84,6 +84,7 @@
     </None>
     <None Include="packages.config" />
     <Content Include="Series\AllSeriesPage.aspx" />
+    <Content Include="Series\Category.aspx" />
     <Content Include="Series\PostDetail.aspx" />
     <Content Include="Styles\Admin\AdminHome.css">
       <DependentUpon>AdminHome.scss</DependentUpon>
@@ -196,6 +197,12 @@
     </Content>
     <Content Include="Styles\PageTemplate.scss" />
     <Content Include="Styles\PageHeader.scss" />
+    <Content Include="Styles\Series\Category.css">
+      <DependentUpon>Category.scss</DependentUpon>
+    </Content>
+    <Content Include="Styles\Series\Category.min.css">
+      <DependentUpon>Category.css</DependentUpon>
+    </Content>
     <Content Include="Styles\SideBar.css">
       <DependentUpon>SideBar.scss</DependentUpon>
     </Content>
@@ -226,6 +233,7 @@
     <Content Include="Styles\Admin\EpisodeItemList.scss" />
     <Content Include="Styles\Admin\EpisodeItem.scss" />
     <Content Include="PostDetail.Master" />
+    <Content Include="Styles\Series\Category.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -344,6 +352,13 @@
     <Compile Include="PostDetail.Master.designer.cs">
       <DependentUpon>PostDetail.Master</DependentUpon>
     </Compile>
+    <Compile Include="Series\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Series\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Series\PostDetail.aspx.cs">
       <DependentUpon>PostDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -366,7 +381,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56324</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

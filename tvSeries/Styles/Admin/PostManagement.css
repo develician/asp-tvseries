@@ -22,17 +22,42 @@
         .PostManagementForm .PostDataList .PostItem .Left img {
           width: 250px;
           height: 250px; }
+          @media screen and (max-width: 1024px) {
+            .PostManagementForm .PostDataList .PostItem .Left img {
+              width: 180px;
+              height: 180px; } }
+          @media screen and (width: 768px) {
+            .PostManagementForm .PostDataList .PostItem .Left img {
+              width: 180px !important;
+              height: 180px !important; } }
+          @media screen and (max-width: 768px) {
+            .PostManagementForm .PostDataList .PostItem .Left img {
+              width: 100px;
+              height: 100px; } }
       .PostManagementForm .PostDataList .PostItem .Right {
         flex: 0.7;
         display: flex;
         flex-direction: column; }
+        @media (max-width: 768px) {
+          .PostManagementForm .PostDataList .PostItem .Right {
+            margin-left: 1rem; } }
         .PostManagementForm .PostDataList .PostItem .Right .Title {
           font-size: 1.5rem;
           font-weight: 600; }
+          @media (max-width: 768px) {
+            .PostManagementForm .PostDataList .PostItem .Right .Title {
+              font-size: 1rem;
+              font-weight: 600; } }
         .PostManagementForm .PostDataList .PostItem .Right .Genre {
           margin-top: 1rem; }
+          @media (max-width: 768px) {
+            .PostManagementForm .PostDataList .PostItem .Right .Genre {
+              font-size: 0.8rem; } }
         .PostManagementForm .PostDataList .PostItem .Right .Year {
           margin-top: 1rem; }
+          @media (max-width: 768px) {
+            .PostManagementForm .PostDataList .PostItem .Right .Year {
+              font-size: 0.8rem; } }
 
 .Pagination {
   display: flex;
@@ -41,6 +66,9 @@
   margin: 0 auto;
   margin-top: 1rem;
   margin-bottom: 1rem; }
+  @media (max-width: 1024px) {
+    .Pagination {
+      width: 90%; } }
   .Pagination .Button {
     border: none;
     outline: none;
