@@ -251,6 +251,7 @@
                             {
                                 TrailerErrorLabel.Text = "지원되지 않는 확장자입니다.";
                                 TrailerErrorLabel.Visible = true;
+                                isUpdate = true;
                                 return;
                             }
 
