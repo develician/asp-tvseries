@@ -118,7 +118,7 @@
             }
             else
             {
-                TrailerErrorLabel.Text = "반드시 두개 이상의 이미지를 업로드해야합니다.";
+                TrailerErrorLabel.Text = "반드시 한개 이상의 이미지를 업로드해야합니다.";
                 TrailerErrorLabel.Visible = true;
                 return;
             }
@@ -268,6 +268,7 @@
                 {
                     TrailerErrorLabel.Text = "반드시 한개 이상의 이미지를 업로드해야합니다.";
                     TrailerErrorLabel.Visible = true;
+                    isUpdate = true;
                     return;
                 }
 
